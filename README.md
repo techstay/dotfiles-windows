@@ -68,3 +68,13 @@ https://registry.npmmirror.com/
 ```
 
 文档 <https://docs.npmjs.com/cli/v8/commands/npm-config>
+
+### starship
+
+使用 Pastel Powerline 主题，可通过下列命令更新。
+
+```powershell
+Invoke-WebRequest https://starship.rs/presets/toml/pastel-powerline.toml -OutFile $HOME/.config/starship.toml
+```
+
+其他预配置主题<https://starship.rs/presets/> 或者到 github 社区寻找。
