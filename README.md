@@ -6,19 +6,19 @@
 
 下列命令都在 powershell 中运行。
 
-创建 git 文件夹。
+创建 git 文件夹
 
 ```sh
 mkdir $HOME/.dotfiles
 ```
 
-克隆项目。
+克隆项目
 
 ```sh
 git clone --bare <url> $HOME/.dotfiles
 ```
 
-添加`.gitignore`文件。
+添加`.gitignore`文件
 
 ```sh
 echo .dotfiles > $HOME/.gitignore
@@ -33,7 +33,7 @@ function Dotfiles {
 Set-Alias dot Dotfiles
 ```
 
-不显示跟踪文件。
+不显示跟踪文件
 
 ```sh
 dot config --local status.showUntrackedFiles no
@@ -50,3 +50,21 @@ dot status
 # 如果确认不需要保留本地更改，可以添加-f参数，会强制覆盖本地文件
 dot checkout -f
 ```
+
+## 配置文件
+
+这里列出了已经添加的配置文件以及说明。
+
+### npm
+
+使用[淘宝镜像](https://npmmirror.com)。
+
+```sh
+# 查看当前npm镜像
+npm config get registry
+
+# 设置npm镜像
+https://registry.npmmirror.com/
+```
+
+文档 <https://docs.npmjs.com/cli/v8/commands/npm-config>
