@@ -58,6 +58,14 @@ dot checkout -f
 
 这里列出了已经添加的配置文件以及说明。
 
+## python
+
+使用[清华镜像](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)。
+
+```sh
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
 ### npm
 
 使用[淘宝镜像](https://npmmirror.com)。
