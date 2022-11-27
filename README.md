@@ -9,6 +9,8 @@
 
 下列命令都在 powershell 中运行。
 
+### 准备工作
+
 创建 git 文件夹
 
 ```sh
@@ -19,12 +21,6 @@ mkdir $HOME/.dotfiles
 
 ```sh
 git clone --bare <url> $HOME/.dotfiles
-```
-
-添加`.gitignore`文件
-
-```sh
-echo .dotfiles > $HOME/.gitignore
 ```
 
 配置 powershell alias(使用`code $PROFILE`打开 powershell 配置文件并添加以下内容)。
@@ -53,6 +49,27 @@ dot status
 # 如果确认不需要保留本地更改，可以添加-f参数，会强制覆盖本地文件
 dot checkout -f
 ```
+
+### 管理文件
+
+现在已经拥有了一个正在使用 git 管理的主目录。对于要管理的配置文件，按照一般 git 项目的做法将文件提交到 dotfiles 中即可。
+
+```sh
+# 添加文件到暂存区
+dot add somefile
+# 查看状态
+dot status
+# 提交文件
+dot commit -m 'commit message'
+# 查看日志
+dot log
+# 推送到远程仓库
+dot push
+```
+
+如果一些配置只在本地修改，不需要同步，可以现在本地创建并切换到分支，修改并提交配置文件。其余的配置文件继续通过主分支进行更新，而本地分支可以通过不断的变基到主分支上，来保持其他配置文件的最新状态。
+
+你可以直接 fork 本仓库，然后将所有用户信息修改为自己的，这样就拥有了一个自己的 dotfiles。如果愿意的话，也可以从我的仓库继续同步更新。
 
 ## 配置文件
 
