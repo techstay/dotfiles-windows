@@ -101,6 +101,10 @@ https://registry.npmmirror.com/
 
 文档 <https://docs.npmjs.com/cli/v8/commands/npm-config>
 
+### cmd & powershell
+
+安装了 clink 和 powershell，均使用了 starship 的主题。终端的具体配置参考[我的笔记](https://github.com/techstay/studyNotes)。
+
 ### starship
 
 使用 Pastel Powerline 主题，可通过下列命令更新。
