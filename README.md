@@ -73,13 +73,13 @@ dot push
 
 ## 配置文件
 
-这里列出了已经添加的配置文件以及说明。
+这里列出了一些配置文件的说明。
 
-## SSH
+### SSH
 
 几个远程 SSH 的配置。
 
-## python
+### python
 
 使用[清华镜像](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)。
 
