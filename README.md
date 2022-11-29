@@ -114,3 +114,7 @@ Invoke-WebRequest https://starship.rs/presets/toml/pastel-powerline.toml -OutFil
 ```
 
 其他预配置主题<https://starship.rs/presets/> 或者到 github 社区寻找。
+
+### git
+
+我的 git 配置。

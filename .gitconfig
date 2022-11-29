@@ -1,0 +1,61 @@
+[user]
+	name = techstay
+	email = lovery521@gmail.com
+	signingKey = 3E002217712EBA30A53D485F7CDDF9CBDDF9BF2E
+[core]
+	editor = vim
+	autocrlf = true
+	longpaths = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+	forceSignAnnotated = true
+[init]
+	defaultBranch = main
+[rerere]
+	enabled = true
+[submodule]
+	recurse = true
+[pull]
+	rebase = true
+[help]
+	autocorrect = 30
+[alias]
+	l = log --oneline --decorate --all --graph
+	co = checkout
+	st = status
+	d = diff
+	ci = commit -m
+	rc = rebase --continue
+	rs = rebase --skip
+	sa = stash apply
+	sp = stash pop
+	sl = stash list
+	ri = rebase -i
+	can = commit --amend --no-edit
+	br = branch
+	unstage = reset HEAD --
+	supdate = submodule update --remote --merge
+	spush = push --recurse-submodules=on-demand
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+[http]
+	proxy = http://localhost:7890
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "git@github.com:"]
+	insteadOf = gh:
+[url "git@github.com:techstay/"]
+	insteadOf = my:
+[sequence]
+	editor = code --wait
+[safe]
+	directory = *
+[rebase]
+	autosquash = true
+[push]
+	recurseSubmodules = on-demand
