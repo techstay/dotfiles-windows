@@ -37,7 +37,6 @@
 	br = branch
 	unstage = reset HEAD --
 	supdate = submodule update --remote --merge
-	spush = push --recurse-submodules=on-demand
 [gpg]
 	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
 [http]
