@@ -6,8 +6,8 @@ Invoke-Expression (&starship init powershell)
 # z.lua
 Invoke-Expression (& { (lua $HOME/z.lua/z.lua --init powershell once enhanced) -join "`n" })
 
-# gh cli
-Invoke-Expression -Command $(gh completion -s powershell | Out-String)
+gh completion -s powershell | Out-String | Invoke-Expression
+hugo completion powershell | Out-String | Invoke-Expression
 
 # Functions
 function Dotfiles {
