@@ -22,19 +22,24 @@
 [help]
 	autocorrect = 30
 [alias]
-	l = log --oneline --decorate --all --graph
+	aa = add -A .
+	br = branch
 	co = checkout
 	st = status
 	d = diff
+	l = log --oneline --decorate --all --graph
 	ci = commit -m
+	can = commit --amend --no-edit
+	amend = commit --amend -m
+	fix = commit --fixup
+	rb = rebase
+	ri = rebase -i
 	rc = rebase --continue
 	rs = rebase --skip
+	ra = rebase --abort
 	sa = stash apply
 	sp = stash pop
 	sl = stash list
-	ri = rebase -i
-	can = commit --amend --no-edit
-	br = branch
 	unstage = reset HEAD --
 	supdate = submodule update --remote --merge
 [gpg]
