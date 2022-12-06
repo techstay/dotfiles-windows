@@ -25,6 +25,7 @@
 	aa = add -A .
 	br = branch
 	co = checkout
+	cp = cherry-pick
 	st = status
 	d = diff
 	l = log --oneline --decorate --all --graph
