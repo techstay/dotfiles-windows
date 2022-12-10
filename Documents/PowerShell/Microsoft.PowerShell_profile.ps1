@@ -1,8 +1,7 @@
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
 
-# Invoke-Expression (&starship init powershell)
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/unicorn.omp.json" | Invoke-Expression
+Invoke-Expression (&starship init powershell)
 
 # set utf-8 encoding
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
