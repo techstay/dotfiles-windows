@@ -8,24 +8,21 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 
 # PSReadLine
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
-Set-PSReadLineKeyHandler -Key Tab -Function Complete # 设置 Tab 键补全
-Set-PSReadLineKeyHandler -Chord 'Ctrl+RightArrow' -Function ForwardWord # 设置 ctrl + 向右键逐字补全
-Set-PSReadLineKeyHandler -Key 'Ctrl+z' -Function Undo # 设置 Ctrl+z 为撤销
-Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward # 设置向上键为后向搜索历史记录
-Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward # 设置向下键为前向搜索历史纪录
 
 # z.lua
 Invoke-Expression (& { (lua $HOME/z.lua/z.lua --init powershell enhanced) -join "`n" })
+
+function zb {
+    z -b $args
+}
 
 gh completion -s powershell | Out-String | Invoke-Expression
 hugo completion powershell | Out-String | Invoke-Expression
 
 # Functions
-function Dotfiles {
+function dot {
     git --git-dir="$HOME/.dotfiles/" --work-tree=$HOME $args
 }
 
 # Alias
 Set-Alias winfetch pwshfetch-test-1
-Set-Alias dot Dotfiles
-

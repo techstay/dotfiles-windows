@@ -4,20 +4,20 @@
     "actions": 
     [
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
             "command": 
             {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -41,8 +41,8 @@
             "colorScheme": "Campbell",
             "font": 
             {
-                "face": "Iosevka Term",
-                "size": 14
+                "face": "MesloLGM NF",
+                "size": 12
             },
             "opacity": 85,
             "startingDirectory": "%USERPROFILE%/Desktop",
@@ -100,14 +100,6 @@
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "commandline": "ssh arch",
-                "guid": "{12d8ead0-ec53-4f45-9628-9c73dfdb8197}",
-                "hidden": false,
-                "icon": "https://cdn0.iconfinder.com/data/icons/flat-round-system/512/archlinux-48.png",
-                "name": "Arch",
-                "startingDirectory": null
             },
             {
                 "guid": "{aab79973-318f-43b6-a9bc-b4096493753f}",
