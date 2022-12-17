@@ -1,7 +1,7 @@
 # dotfiles-windows
 
 ![last commit](https://img.shields.io/github/last-commit/techstay/dotfiles-windows?style=flat-square)
-![](https://img.shields.io/badge/Windows_11-0078D6?style=flat-square&logo=windows-11&logoColor=white)
+![os](https://img.shields.io/badge/Windows_11-0078D6?style=flat-square&logo=windows-11&logoColor=white)
 
 使用 Git 管理 Windows 系统下的配置文件。
 
@@ -11,43 +11,33 @@
 
 ### 准备工作
 
+- [安装 scoop](https://studynotes.techstay.tech/notes/windows/scoop.html)
+- 安装[这篇笔记里提到的软件和字体](https://studynotes.techstay.tech/notes/windows/WindowsTerminalExperience.html)
+
+### 克隆项目
+
 创建 git 文件夹
 
 ```sh
 mkdir $HOME/.dotfiles
 ```
 
-克隆项目
+克隆项目，如果你想建立自己的 dotfiles 项目，可以先 fork，然后将地址改为自己的。
 
 ```sh
-git clone --bare <url> $HOME/.dotfiles
+git clone --bare https://github.com/techstay/dotfiles-windows $HOME/.dotfiles
 ```
 
-配置 powershell alias(使用`code $PROFILE`打开 powershell 配置文件并添加以下内容)。
-
-```powershell
-function Dotfiles {
-    git --git-dir="$HOME/.dotfiles/" --work-tree=$HOME $args
-}
-Set-Alias dot Dotfiles
-```
-
-不显示跟踪文件
+如果克隆不成功，可能需要配置 git 代理。
 
 ```sh
-dot config --local status.showUntrackedFiles no
+git config --global http.proxy localhost:7890
 ```
 
-一切准备就绪之后，检出项目。如果因为文件冲突而检出失败，请手动备份并移除文件，然后再次检出。
+检出 dotfiles，如果是新装的系统，可以添加`-f`参数强制检出，会覆盖本地的所有更改。
 
 ```sh
-dot checkout
-
-# 检查文件状态
-dot status
-
-# 如果确认不需要保留本地更改，可以添加-f参数，会强制覆盖本地文件
-dot checkout -f
+git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout
 ```
 
 ### 管理文件

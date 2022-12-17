@@ -55,6 +55,8 @@
 	required = true
 [url "git@github.com:"]
 	insteadOf = gh:
+[url "git@gitlab.com:"]
+	insteadOf = gl:
 [url "git@github.com:techstay/"]
 	insteadOf = my:
 [sequence]
@@ -82,3 +84,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[credential "helperselector"]
+	selected = manager

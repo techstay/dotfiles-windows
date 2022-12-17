@@ -16,8 +16,8 @@ function zb {
     z -b $args
 }
 
-gh completion -s powershell | Out-String | Invoke-Expression
-hugo completion powershell | Out-String | Invoke-Expression
+# Completions
+Get-ChildItem -Path $PROFILE/../Completions/ | ForEach-Object { . $_ }
 
 # Functions
 function dot {
