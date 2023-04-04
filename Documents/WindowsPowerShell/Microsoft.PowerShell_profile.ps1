@@ -1,3 +1,6 @@
+# set utf-8 encoding
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 # starship
 Invoke-Expression (&starship init powershell)
 

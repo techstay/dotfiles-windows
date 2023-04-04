@@ -1,5 +1,18 @@
+# ------------------------------------------------------------------------------
+# Import Modules
+# ------------------------------------------------------------------------------
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
+Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+
+# ------------------------------------------------------------------------------
+# Completions
+# ------------------------------------------------------------------------------
+Get-ChildItem -Path $PROFILE/../Completions/ | ForEach-Object { . $_ }
+
+# ------------------------------------------------------------------------------
+# Terminal Configuration
+# ------------------------------------------------------------------------------
 
 Invoke-Expression (&starship init powershell)
 
@@ -16,13 +29,13 @@ function zb {
     z -b $args
 }
 
-# Completions
-Get-ChildItem -Path $PROFILE/../Completions/ | ForEach-Object { . $_ }
 
-# Functions
+# ------------------------------------------------------------------------------
+# Userdefined Functions and Alias
+# ------------------------------------------------------------------------------
+
 function dot {
     git --git-dir="$HOME/.dotfiles/" --work-tree=$HOME $args
 }
 
-# Alias
 Set-Alias winfetch pwshfetch-test-1

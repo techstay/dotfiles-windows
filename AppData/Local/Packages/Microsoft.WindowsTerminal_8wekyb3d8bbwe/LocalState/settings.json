@@ -42,7 +42,7 @@
             "font": 
             {
                 "face": "MesloLGM NF",
-                "size": 12
+                "size": 11.0
             },
             "opacity": 85,
             "startingDirectory": "%USERPROFILE%/Desktop",
@@ -75,8 +75,7 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-                "elevate": true,
+                "commandline": "gsudo \"C:/Program Files/PowerShell/7/pwsh.exe\"",
                 "guid": "{41dd7a51-f0e1-4420-a2ec-1a7130b7e950}",
                 "hidden": false,
                 "icon": "https://i.imgur.com/kZeD6EN.png",
@@ -343,5 +342,6 @@
         }
     ],
     "theme": "dark",
+    "themes": [],
     "useAcrylicInTabRow": true
 }
