@@ -40,14 +40,15 @@
 	rs = rebase --skip
 	ra = rebase --abort
 	sa = stash apply
-	sp = stash pop
 	sl = stash list
+	sw = switch
+	sp = stash pop
 	unstage = reset HEAD --
 	supdate = submodule update --remote --merge
 [gpg]
 	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
 [http]
-	proxy = 
+	proxy =
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
@@ -58,6 +59,7 @@
 	editor = code --wait
 [safe]
 	directory = *
+	directory = C:/Users/asddf/Desktop/*
 [rebase]
 	autosquash = true
 [push]

@@ -1,20 +1,21 @@
 # ------------------------------------------------------------------------------
 # Import Modules
 # ------------------------------------------------------------------------------
-Import-Module posh-git
-Import-Module -Name Terminal-Icons
-Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+# Import-Module posh-git
+# Import-Module -Name Terminal-Icons
+# Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
 
 # ------------------------------------------------------------------------------
 # Completions
 # ------------------------------------------------------------------------------
-Get-ChildItem -Path $PROFILE/../Completions/ | ForEach-Object { . $_ }
+# Get-ChildItem -Path $PROFILE/../Completions/ | ForEach-Object { . $_ }
 
 # ------------------------------------------------------------------------------
 # Terminal Configuration
 # ------------------------------------------------------------------------------
 
 Invoke-Expression (&starship init powershell)
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/montys.omp.json" | Invoke-Expression
 
 # set utf-8 encoding
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
@@ -31,7 +32,7 @@ function zb {
 
 
 # ------------------------------------------------------------------------------
-# Userdefined Functions and Alias
+# User Defined Functions and Alias
 # ------------------------------------------------------------------------------
 
 function dot {
