@@ -45,6 +45,8 @@ git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout
 现在已经拥有了一个正在使用 git 管理的主目录。对于要管理的配置文件，按照一般 git 项目的做法将文件提交到 dotfiles 中即可。
 
 ```sh
+# 隐藏未跟踪文件
+dot config --local status.showUntrackedFiles no
 # 添加文件到暂存区
 dot add somefile
 # 查看状态
