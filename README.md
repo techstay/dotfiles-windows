@@ -7,12 +7,11 @@
 
 ## 开始使用
 
-下列命令都在 powershell 中运行。
+下列命令都在 pwsh 中运行。
 
 ### 准备工作
 
-- [安装 scoop](https://studynotes.techstay.tech/notes/windows/scoop.html)
-- 安装[这篇笔记里提到的软件和字体](https://studynotes.techstay.tech/notes/windows/WindowsTerminalExperience.html)
+缺啥装啥。
 
 ### 克隆项目
 
@@ -34,7 +33,7 @@ git clone --bare https://github.com/techstay/dotfiles-windows $HOME/.dotfiles
 git config --global http.proxy localhost:7890
 ```
 
-检出 dotfiles，如果是新装的系统，可以添加`-f`参数强制检出，会覆盖本地的所有更改。
+检出 dotfiles，如果是新装的系统，可以添加`-f`参数强制检出，会覆盖本地所有配置文件。
 
 ```sh
 git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout
@@ -59,17 +58,11 @@ dot log
 dot push
 ```
 
-如果一些配置只在本地修改，不需要同步，可以现在本地创建并切换到分支，修改并提交配置文件。其余的配置文件继续通过主分支进行更新，而本地分支可以通过不断的变基到主分支上，来保持其他配置文件的最新状态。
-
-你可以直接 fork 本仓库，然后将所有用户信息修改为自己的，这样就拥有了一个自己的 dotfiles。如果愿意的话，也可以从我的仓库继续同步更新。
-
 ## 配置文件
-
-这里列出了一些配置文件的说明。
 
 ### SSH
 
-几个远程 SSH 的配置。
+SSH 配置。
 
 ### python
 
@@ -93,7 +86,7 @@ https://registry.npmmirror.com/
 
 文档 <https://docs.npmjs.com/cli/v8/commands/npm-config>
 
-### cmd & powershell
+### 终端
 
 安装了 clink 和 powershell，均使用了 starship 的主题。终端的具体配置参考[我的笔记](https://github.com/techstay/studyNotes)。
 
@@ -110,3 +103,13 @@ Invoke-WebRequest https://starship.rs/presets/toml/pastel-powerline.toml -OutFil
 ### git
 
 我的 git 配置。
+
+### rime
+
+我的 rime 输入法配置，基于雾凇拼音。
+
+更新基础配置和词库。
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash -s -- iDvel/rime-ice:others/recipes/full
+```
