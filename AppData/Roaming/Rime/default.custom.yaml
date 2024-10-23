@@ -6,11 +6,13 @@ customization:
   rime_version: 1.8.5
 patch:
   schema_list:
-    - { schema: double_pinyin_mspy }
+    - schema: double_pinyin_mspy
+    - schema: double_pinyin_flypy
   menu/page_size: 9
   switcher/hotkeys:
     - F4
     - "Shift+grave"
+  switcher/fold_options: false
   key_binder/bindings/+:
     - { when: paging, accept: comma, send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
