@@ -1,10 +1,10 @@
 # ------------------------------------------------------------------------------
 # Import Modules
 # ------------------------------------------------------------------------------
-# scoop intall posh-git scoop-completion terminal-icons
-# Import-Module posh-git
-# Import-Module -Name Terminal-Icons
-# Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+# scoop install posh-git scoop-completion terminal-icons
+Import-Module posh-git
+Import-Module -Name Terminal-Icons
+Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
 
 # ------------------------------------------------------------------------------
 # Completions
@@ -46,7 +46,4 @@ function scoop-clean {
     scoop cleanup *
     scoop cache rm *
 }
-#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
 
-Import-Module -Name Microsoft.WinGet.CommandNotFound
-#f45873b3-b655-43a6-b217-97c00aa0db58
