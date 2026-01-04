@@ -1,18 +1,14 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.15.0.0
+  distribution_version: 0.17.4
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Thu Feb 29 03:34:38 2024"
-  rime_version: 1.8.5
+  modified_time: "Sat Oct 11 19:53:46 2025"
+  rime_version: 1.13.1
 patch:
-  app_options:
-    "adobe premiere pro.exe": { ascii_mode: true }
-    photoshop.exe: { ascii_mode: true }
-    windowsterminal.exe: { ascii_mode: true }
-  "style/color_scheme": purity_of_form_custom
+  "style/font_face": "微软雅黑"
+  "style/color_scheme": mint_dark_green
   "style/display_tray_icon": true
-  "style/font_face": "HarmonyOS Sans SC"
-  "style/font_point": 20
-  "style/horizontal": true
+  "style/font_point": 16
+  "style/horizontal": false
   "style/inline_preedit": true
-  "style/label_font_point": 20
+  "style/label_font_point": 16
