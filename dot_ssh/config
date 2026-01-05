@@ -1,0 +1,13 @@
+Host *
+    ServerAliveInterval 20
+    ServerAliveCountMax 10
+Host rasp
+    HostName raspberrypi
+    # HostName 192.168.31.119
+    User techstay
+Host arch
+    HostName 192.168.93.130
+    User techstay
+Host wrt
+    HostName 192.168.42.2
+    User root

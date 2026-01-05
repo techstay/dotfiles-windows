@@ -1,0 +1,15 @@
+patch:
+  "menu/page_size": 9
+  #　云拼音模块，试了一下不太好用
+  # "engine/processors/+":
+  #   - lua_processor@cloud_pinyin_processor
+  # "engine/translators/+":
+  #   - lua_translator@cloud_pinyin_translator
+
+  # 万象语言模型
+  "grammar/language": wanxiang-lts-zh-hans
+  "grammar/collocation_max_length": 5
+  "grammar/collocation_min_length": 2
+  "translator/contextual_suggestions": true
+  "translator/max_homophones": 7
+  "translator/max_homographs": 7

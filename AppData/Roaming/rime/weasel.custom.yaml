@@ -1,0 +1,14 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sat Oct 11 19:53:46 2025"
+  rime_version: 1.13.1
+patch:
+  "style/font_face": "微软雅黑"
+  "style/color_scheme": mint_dark_green
+  "style/display_tray_icon": true
+  "style/font_point": 16
+  "style/horizontal": false
+  "style/inline_preedit": true
+  "style/label_font_point": 16
