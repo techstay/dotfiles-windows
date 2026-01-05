@@ -1,7 +1,7 @@
 # dotfiles-windows
 
-![last commit](https://img.shields.io/github/last-commit/techstay/dotfiles-windows?style=flat-square)
-![os](https://img.shields.io/badge/Windows_11-0078D6?style=flat-square&logo=windows-11&logoColor=white)
+![last commit](https://img.shields.io/github/last-commit/techstay/dotfiles-windows?style=for-the-badge)
+![os](https://img.shields.io/badge/Windows_11-0078D6?style=for-the-badge&logo=windows-11&logoColor=white)
 
 使用 Git 管理 Windows 系统下的配置文件。
 
